@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+	<script lang="javascript" type="text/javascript" src="javascript/funcionalidad.js"></script>
+	
+    <title>Registro estudiante</title>
+</head>
+<body>
+	<form name="frmdatos" action="registro_recepcion.html" method="get" enctype="multipart/form-data" onsubmit="return validar(frmdatos);">
+	
+	<table>
+		<tr class="alineacion">
+			<td>
+				<h1>
+					REGISTRO DE ESTUDIANTE
+				</h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<fieldset>
+					<legend class="subtitulo">DATOS PERSONALES</legend>
+			    		<p>
+				    		Nombre: <input type="text" name="nombre" placeholder="Nombre" required="required" autofocus="autofocus" id="caja">
+				    		Apellido pat.: <input type="text" name="appat" placeholder="Apellido pat" size="15" required="required" id="caja">
+				    		Apellido mat.: <input type="text" name="apmat" placeholder="Apellido mat" size="15" required="required" id="caja">
+			    		</p>
+						<p>
+							Numero de control: <input type="text" name="nocontrol" placeholder="No. control" required="required" id="caja">
+							Fecha de nacimiento: <input type="date" name="fechanac" required="required" id="caja">
+							
+						</p>
+				</fieldset>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<fieldset>
+					<legend class="subtitulo">DATOS DE LOCALIZACION</legend>
+						<p>
+							Direccion: <textarea name="direccion" rows="2" cols="30" placeholder="Direccion" required="required" id="caja"></textarea>
+							Correo electronico: <input type="email" name="correo" placeholder="correo@servidor.com" required="required" id="caja">
+							Celular: <input type="text" name="celular" placeholder="celular" size="10" required="required" id="caja">
+						</p> 
+				</fieldset>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<fieldset>
+					<legend class="subtitulo">OTROS DATOS</legend>
+					<p>
+						Carrera: <select name="carrera" id="caja">
+							<option value="1">Ingenieria en Sistemas Computacionales</option>
+							<option value="2">Ingenieria en Agronomia</option>
+							<option value="3">Licenciatura en Biologia</option>
+							<option value="4">Licenciatura en Gestion Empresarial</option>
+						</select>
+
+						Estatus: <label><input type="radio" name="estatus" value="1" required="required">Inscrito</label>
+								<label><input type="radio" name="estatus" value="2">No inscrito</label>
+								<label><input type="radio" name="estatus" value="3">Baja</label>
+								<label><input type="radio" name="estatus" value="4">Egresado</label>
+					</p>
+				</fieldset>
+			</td>
+		</tr>
+		<tr class="alineacion">
+			<td>
+				<p>
+					<button type="reset">
+					Limpiar formulario
+					</button>
+					<button type="submit">
+						Enviar datos
+					</button>
+				</p>
+			</td>
+		</tr>
+	</table>
+    </form>
+</body>
+</html>
